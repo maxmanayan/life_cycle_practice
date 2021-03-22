@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from '../components/Button'
 import CounterClass from '../components/CounterClass'
+import CounterFunctional from '../components/CounterFunctional'
 
 // class in js
 class ClassLifeCycle extends React.Component {
@@ -34,8 +35,8 @@ class ClassLifeCycle extends React.Component {
         return(
             <div>
                 <h1>ClassLifeCycle</h1>
-                <CounterClass header='Counter 1' />
-                <CounterClass header='Counter 2' />
+                <CounterClass header='Class Counter 1' />
+                <CounterFunctional header='Functional Counter 1' />
             </div>
         )
     }

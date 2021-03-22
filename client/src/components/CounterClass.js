@@ -1,5 +1,6 @@
 import React from 'react'
 import Button from './Button'
+import Card from './Card'
 import Count from './Count'
 
 // class in js
@@ -12,7 +13,7 @@ class CounterClass extends React.Component {
        // define initial state here
        this.state = {
            counter: 0,
-           showExtraThing: true,
+           showExtraThing: false,
            people: ({name: 'Max'}, {name: 'Buck'}),
            user: {email: 'cool@gmail.com'},
        }
@@ -67,15 +68,20 @@ class CounterClass extends React.Component {
     render() {
         console.log('counter render called')
         return(
-            <div>
-                <h3>{this.props.header}</h3>
+            <Card header={this.props.header}>
+                {/* <h1>{this.props.header}</h1> */}
                 {/* <p>counter: {this.state.counter}</p> */}
                 <Count count={this.state.counter} />
                 <Button onClick={this.addOne}>Add One</Button>
                 <Button onClick={this.minusOne}>Minus One</Button>
                 <Button onClick={this.zeroOut}>Zero Out</Button>
-            </div>
+                <Button onClick={this.toggle}>Toggle</Button>
+                {this.state.showExtraThing && <p>Extra Thing</p>}
+            </Card>
         )
     }
 }
+
+
+
 export default CounterClass

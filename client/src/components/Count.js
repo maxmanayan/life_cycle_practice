@@ -10,7 +10,7 @@ class Count extends React.Component{
         console.log('Count update')
     }
 
-    
+
     render(){
         console.log('Count render')
         return(
@@ -18,4 +18,7 @@ class Count extends React.Component{
         )
     }
 }
+
+
+
 export default Count
