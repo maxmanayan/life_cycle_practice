@@ -4,29 +4,35 @@ import axios from 'axios';
 
 // functional component -- just a JS function
 const Home = () => {
-  const [testData, setTestData] = useState(null)
-  const [loading, setLoading] = useState(true)
 
-  useEffect(()=>{
-    getData()
-  },[])
+  // const [ballX, setBallX] = useState(0)
+  // const [dX, setDX] = useState(4)
 
-  const getData = async () => {
-    try {
-      let res = await axios.get('/api/api_test')
-      setTestData(res.data.data_here)
-      setLoading(false)
-    } catch (err) {
-      console.log(err)
-      setLoading(false)
-    }
-  }
+  // const tick = () => {
+  //   console.log('ballX: ', ballX)
 
-  if(loading) return <p>Loading</p>
+  //   let newBallX = ballX + dX
+
+  //   setBallX(newBallX)
+  // }
+
+  // useEffect(()=>{
+  //   setInterval(()=>{
+  //     let ticker = tick()
+  //   }, 1000)
+
+  //   console.log('useEffect called')
+
+
+  //   return(()=>{
+  //     console.log('unmounted')
+  //  })
+  // }, [ballX])
+
+ 
   return(
     <div>
-      <h1>Home</h1>
-      {testData && testData}
+      <p>Nice</p> 
     </div>
   )
 }
