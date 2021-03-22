@@ -7,21 +7,21 @@ const Loader = ({text, type, color}) => {
 
 
   const getLoaderType = (type) => {
-    if (type == 'beat') {
+    if (type === 'beat') {
       return <BeatLoader loading color={color ? color : PRIMARY_COLOR} size={10} />
-    } else if (type == 'square') {
+    } else if (type === 'square') {
       return <SquareLoader loading color={color ? color : PRIMARY_COLOR} size={20}/>
-    } else if (type == 'ring'){
+    } else if (type === 'ring'){
       return <RingLoader loading color={color ? color : PRIMARY_COLOR} size={30} />
-    } else if (type == 'clock'){
+    } else if (type === 'clock'){
       return <ClockLoader loading color={color ? color : PRIMARY_COLOR} size={30} />
-    } else if (type == 'circle'){
+    } else if (type === 'circle'){
       return <CircleLoader loading color={color ? color : PRIMARY_COLOR} size={30} />
-    } else if (type == 'hash'){
+    } else if (type === 'hash'){
       return <HashLoader loading color={color ? color : PRIMARY_COLOR} size={30} />
-    } else if (type == 'moon'){
+    } else if (type === 'moon'){
       return <MoonLoader loading color={color ? color : PRIMARY_COLOR} size={30} />
-    } else if (type == 'bounce'){
+    } else if (type === 'bounce'){
       return <BounceLoader loading color={color ? color : PRIMARY_COLOR} size={30} />
     } else {
       return <BarLoader loading color={color ? color : PRIMARY_COLOR}/>

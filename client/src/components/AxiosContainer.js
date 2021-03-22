@@ -1,5 +1,4 @@
 import ErrorMessage from "./ErrorMessage"
-import FormattedMessage from "./FormattedMessage"
 import Loader from "./Loader"
 
 const AxiosContainer = (props) => {
